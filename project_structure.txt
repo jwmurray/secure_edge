@@ -1,0 +1,33 @@
+secure_edge/
+├── certs/                    # TLS certs
+│   ├── server.crt
+│   └── server.key
+├── config/
+│   └── config.rs             # DB/LDAP/Cert config
+├── migrations/               # SeaORM DB migrations
+├── src/
+│   ├── auth/                 # Auth logic
+│   │   ├── mod.rs
+│   │   ├── jwt.rs
+│   │   └── ldap.rs
+│   ├── db/                   # SeaORM models
+│   │   ├── mod.rs
+│   │   ├── login_attempt.rs
+│   │   └── user.rs
+│   ├── routes/               # Axum routes
+│   │   ├── mod.rs
+│   │   ├── auth_routes.rs
+│   │   ├── status.rs
+│   │   ├── video.rs
+│   │   └── static_files.rs
+│   ├── tls.rs
+│   ├── main.rs
+│   └── state.rs              # AppState struct (DB pool, etc.)
+├── static/
+│   ├── index.html
+│   └── video.html
+├── .env                      # Config vars
+├── Dockerfile                # Optional
+├── docker-compose.yml        # PostgreSQL + LDAP + app
+├── Cargo.toml
+└── README.md

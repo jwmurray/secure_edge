@@ -1,0 +1,24 @@
+[package]
+name = "secure_edge"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+axum = "0.8.3"
+dotenvy = "0.15.7"
+image = "0.25.6"
+jsonwebtoken = "9.3.1"
+ldap3 = "0.11.5"
+rustls = "0.23.26"
+sea-orm = { version = "1.1.10", features = ["sqlx-postgres"] }
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "1.0.140"
+# sqlx = { version = "0.8.4", features = ["postgres", "runtime-tokio-native-tls"] }
+sqlx = { version = "0.7", features = ["runtime-tokio-native-tls", "postgres"] }
+
+time = "0.3.41"
+tokio = { version = "1.44.2", features = ["full"] }
+tower = "0.5.2"
+tower-http = "0.6.2"
+tracing-subscriber = "0.3.19"
+uuid = { version = "1.16.0", features = ["v4"] }
